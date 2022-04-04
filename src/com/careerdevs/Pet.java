@@ -1,18 +1,28 @@
 package com.careerdevs;
 
 public class Pet {
+    private String petName;
     private String petType;
     private  short petAge;
     private float pricePerPet;
 
 
-    public Pet(String petType, short petAge, float pricePerPet){
+    public Pet(String petName, String petType, short petAge, float pricePerPet){
 
+        this.petName = petName;
         this.petType = petType;
         this.petAge = petAge;
         this.pricePerPet = pricePerPet;
 
 
+    }
+
+    public String getPetName() {
+        return petName;
+    }
+
+    public void setPetName(String petName) {
+        this.petName = petName;
     }
 
     public String getPetType() {
@@ -39,11 +49,11 @@ public class Pet {
         this.pricePerPet = pricePerPet;
     }
 
-
     @Override
     public String toString() {
         return "Pet{" +
-                "petType='" + petType + '\'' +
+                "petName='" +  petName + '\'' +
+                ", petType'" + petType + '\'' +
                 ", petAge=" + petAge +
                 ", pricePerPet=" + pricePerPet +
                 '}';
@@ -55,7 +65,7 @@ public class Pet {
 /*
 
 companyStoreName ="Tiny Pets"
-petType= ["hamsters","kittens", "rabbits"]
+petName= ["hamsters","kittens", "rabbits"]
 petInventory = ["Timothy hay", "Kitten Food", "greensmixed"]
 pricePerPet = [10, 50, 20]
 */
