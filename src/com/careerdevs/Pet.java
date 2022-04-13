@@ -4,10 +4,10 @@ public class Pet {
     private String petName;
     private String petType;
     private  short petAge;
-    private float pricePerPet;
+    private double pricePerPet;
 
 
-    public Pet(String petName, String petType, short petAge, float pricePerPet){
+    public Pet(String petName, String petType, short petAge, double pricePerPet){
 
         this.petName = petName;
         this.petType = petType;
@@ -41,31 +41,31 @@ public class Pet {
         this.petAge = petAge;
     }
 
-    public float getPricePerPet() {
+    public double getPricePerPet() {
+
+
         return pricePerPet;
     }
+
 
     public void setPricePerPet(float pricePerPet) {
         this.pricePerPet = pricePerPet;
     }
 
+
+
     @Override
-    public String toString() {
-        return "Pet{" +
-                "petName='" +  petName + '\'' +
-                ", petType'" + petType + '\'' +
-                ", petAge=" + petAge +
-                ", pricePerPet=" + pricePerPet +
-                '}';
+    public String toString () {
+        return petName + " " + petType + " "+  petAge + " Will be " +
+                pricePerPet ;
+
     }
 }
-
-
 
 /*
 
 companyStoreName ="Tiny Pets"
 petName= ["hamsters","kittens", "rabbits"]
-petInventory = ["Timothy hay", "Kitten Food", "greensmixed"]
+petInventory = ["Timothy hay", "Kitten Food", "greens-mixed"]
 pricePerPet = [10, 50, 20]
 */
