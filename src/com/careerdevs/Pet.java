@@ -1,18 +1,23 @@
 package com.careerdevs;
 
+import java.text.NumberFormat;
+
 public class Pet {
     private String petName;
     private String petType;
-    private  short petAge;
+    private short petAge;
     private double pricePerPet;
+    private NumberFormat formatter = NumberFormat.getCurrencyInstance();
 
 
-    public Pet(String petName, String petType, short petAge, double pricePerPet){
+
+    public Pet(String petName, String petType, short petAge, double pricePerPet) {
 
         this.petName = petName;
         this.petType = petType;
         this.petAge = petAge;
         this.pricePerPet = pricePerPet;
+
 
 
     }
@@ -43,23 +48,22 @@ public class Pet {
 
     public double getPricePerPet() {
 
-
         return pricePerPet;
     }
 
 
-    public void setPricePerPet(float pricePerPet) {
+    public void setPricePerPet(double pricePerPet) {
         this.pricePerPet = pricePerPet;
     }
 
 
-
     @Override
-    public String toString () {
-        return petName + " " + petType + " "+  petAge + " Will be " +
-                pricePerPet ;
+    public String toString() {
+        return petName + ": " + petType + " "+ "Age:"+ petAge +" "+ "Adopting Fee :" +  formatter.format(pricePerPet);
 
     }
+
+
 }
 
 /*

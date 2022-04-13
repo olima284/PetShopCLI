@@ -1,5 +1,6 @@
 package com.careerdevs;
 
+import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -43,14 +44,13 @@ public class PetShop {
 
     }
 
-    @Override
-    public String toString() {
-        return "PetShop{" +
-                "petShopName='" + petShopName + '\'' +
-                ", notYetAdopted=" + notYetAdopted +
-                ", adoptedPets=" + adoptedPets +
-                '}';
-    }
+//    @Override
+//    public String toString() {
+//        return "PetShop" +
+//                "petShopName='" + petShopName + '\'' +
+//                ", notYetAdopted=" + notYetAdopted +
+//                ", adoptedPets=" + adoptedPets +"";
+  //  }
 
     public boolean buyPet(String yourPetName) {
         if (notYetAdopted.size() == 0) {
@@ -74,7 +74,7 @@ public class PetShop {
 
     public void returnPet(String yourPetName) {
         if (adoptedPets.size() == 0) {
-            System.out.println("We are out of Cars");
+            System.out.println("We are out of Pets");
             return;
 
         }
@@ -88,4 +88,6 @@ public class PetShop {
             }
         }
     }
+
+
 }
